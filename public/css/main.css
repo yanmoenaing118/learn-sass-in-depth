@@ -1,0 +1,261 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: arial;
+  color: #777;
+  font-size: 1.6rem;
+}
+
+.header {
+  padding: 3rem;
+  box-shadow: 0 3px 5px rgba(119, 119, 119, 0.2);
+}
+
+.main {
+  max-width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.boxes {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: flex-wrap;
+}
+.boxes .box {
+  width: 14rem;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(119, 119, 119, 0.4);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  flex: 1;
+}
+.boxes .box:not(:last-child) {
+  margin-right: 1rem;
+}
+.boxes .box:hover {
+  transition: transform 1s;
+  transform: rotateY(360deg);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.move-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  animation-name: inline-uaoqsfo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes inline-uaoqsfo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(80vw);
+  }
+}
+
+.list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.list li {
+  flex: 1;
+  height: 50px;
+  font-size: 1.5rem;
+}
+.list li {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background-color: #ddf;
+}
+.list li:hover {
+  cursor: pointer;
+  background-color: #e1e1ff;
+}
+
+.replace-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replace-phone:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/phone.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.replace-cloud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replace-cloud:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/cloud.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.replace-facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replace-facebook:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/facebook2.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.replace-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replace-google:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/google2.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.replace-appleinc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replace-appleinc:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/appleinc.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.replact-github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+}
+.replact-github:hover {
+  text-indent: -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+  background-image: url("/assets/SVG/github.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(119, 119, 119, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.avatar img {
+  width: 100%;
+}
+
+.h1 {
+  font-size: 6rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+.h2 {
+  font-size: 5rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+.h3 {
+  font-size: 4rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+.h4 {
+  font-size: 3rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+.h5 {
+  font-size: 2rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+.h6 {
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  color: #777;
+}
+
+/*# sourceMappingURL=main.css.map */

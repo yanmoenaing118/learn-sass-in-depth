@@ -1,0 +1,118 @@
+html {
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  font-family: $primary-font;
+  color: $color-gray;
+  font-size: 1.6rem;
+}
+.header {
+  padding: 3rem;
+  box-shadow: 0 3px 5px rgba($color-gray, 0.2);
+}
+.main {
+  max-width: $max-width;
+  @include centerEl(2rem);
+}
+.boxes {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: flex-wrap;
+  .box {
+    @include createBox(14rem);
+    @include flexCenter();
+    box-shadow: none;
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      @include rotate360();
+    }
+  }
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+// @include corner-icon(android, top, left);
+// @include corner-icon(airplane, top, left);
+// @include corner-icon(appleinc, top, left);
+// @include corner-icon(alarm, top, left);
+// @include corner-icon(facebook2,top,left);
+.move-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  @include move-from-left-to-right(1s) {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(80vw);
+    }
+  }
+}
+
+.list {
+  flex: 1;
+  @include horizontal-list();
+
+  li {
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    background-color: #ddf;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten(#ddf, 0.8);
+    }
+  }
+}
+
+.replace-phone {
+  @include replace-on-hover(phone)
+}
+
+.replace-cloud {
+  @include replace-on-hover(cloud);
+}
+
+.replace-facebook {
+  @include replace-on-hover(facebook2);
+}
+
+.replace-google {
+  @include replace-on-hover(google2);
+}
+
+.replace-appleinc {
+  @include replace-on-hover(appleinc);
+}
+
+.replact-github {
+  @include replace-on-hover(github)
+}
+
+.avatar {
+
+  display: flex;
+  flex-direction: column;
+  @include square(200px, 10px);
+  border-bottom: 1px solid rgba(#000,0.2);
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+.h1 {
+  @include typo(6rem, 0.8rem);
+}
+
+.h2 {
+  @include typo(5rem, 0.8rem);
+}
+
+.h3 {
+  @include typo(4rem, 0.8rem);
+}
+
+
+.h4{
+  @include typo(3rem, 0.8rem);
+}
+
+.h5 {
+  @include typo(2rem, 0.8rem);
+}
+
+.h6 {
+  @include typo(1rem, 0.8rem);
+}

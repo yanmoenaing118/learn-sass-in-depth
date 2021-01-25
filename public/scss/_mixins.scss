@@ -1,0 +1,87 @@
+@mixin createBox($size) {
+  width: $size;
+  height: auto;
+  box-shadow: 0 2px 4px rgba($color-gray, 0.4);
+  padding: 1rem;
+}
+@mixin centerEl($pad){
+  margin-left: auto;
+  margin-right: auto;
+  padding: $pad;
+}
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin rotate360() {
+  transition: transform 1s;
+  transform: rotateY(360deg);
+}
+@mixin corner-icon($name,$top-or-bottom, $left-or-right) {
+  .icon-#{$name} {
+    background-image: url("/assets/SVG/#{$name}.svg");
+    position: absolute;
+    $top-or-bottom: 0;
+    $left-or-right: 0;
+  }
+}
+@mixin move-from-left-to-right($duration) {
+  $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin horizontal-list {
+  @include reset-list();
+  display: flex;
+  justify-content: space-between;
+  li {
+    flex: 1;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+@mixin replact-text($image, $x: 50%, $y: 50%) {
+  text-indent:  -99999em;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.2s ease;
+
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: $x $y;
+  }
+}
+@mixin replace-on-hover($image) {
+  @include flexCenter();
+  height: 100%;
+  width: 100%;
+  background-position: 50% 100%;
+  &:hover {
+    @include replact-text(url("/assets/SVG/#{$image}.svg"));
+  }
+}
+@mixin square($size, $radius: 0) {
+  @include createBox($size);
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+@mixin typo($font-size, $pad-h: 0.6rem, $pad-v: 0.6rem, $color: #777) {
+  font-size: $font-size;
+  padding: $pad-v $pad-h;
+  color: $color;
+}
