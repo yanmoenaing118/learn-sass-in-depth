@@ -1,0 +1,8 @@
+.form {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+@include order(1rem, "input.address", "input.name", "input.zip");

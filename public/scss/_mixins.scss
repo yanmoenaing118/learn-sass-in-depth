@@ -85,3 +85,12 @@
   padding: $pad-v $pad-h;
   color: $color;
 }
+
+@mixin order($pad, $selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      margin-top: 1rem;
+      padding: $pad;
+    }
+  }
+}
