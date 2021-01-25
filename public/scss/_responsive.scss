@@ -1,0 +1,29 @@
+// $desktop: 120rem;
+// $tablet: 78.6rem;
+// $mobile: 48rem;
+//
+// @mixin media($types...) {
+//   @each $type in $types {
+//     @media screen and (max-width: $type) {
+//       @content($type);
+//     }
+//   }
+// }
+//
+//
+// @include media($desktop, $tablet, $mobile) using ($type) {
+//   .boxes {
+//     @if $type == $tablet {
+//       background: green;
+//     }
+//
+//     @if $type == $desktop {
+//       background: red;
+//     }
+//     @if $type == $mobile {
+//       background: blue;
+//     }
+//
+//   }
+//
+// }

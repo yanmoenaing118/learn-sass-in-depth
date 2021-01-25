@@ -73,7 +73,7 @@ body {
   li {
     margin-bottom: 1.2rem;
     padding: 1rem;
-    background-color: #ddf;
+    background-color: #4dfd3f;
 
     &:hover {
       cursor: pointer;
@@ -114,5 +114,26 @@ body {
   border-bottom: 1px solid rgba(#000,0.2);
   img {
     width: 100%;
+  }
+}
+
+.code{
+  overflow-x: scroll;
+}
+@include hightlight-syntax(
+  $string: #080,
+  $comment: #800,
+  $variable: #60b,
+  $keyword: #f44
+);
+
+.btn {
+  border: 1px solid green;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+
+  @include hover {
+    border-radius: 10px;
+    transform: translateY(-3px);
   }
 }

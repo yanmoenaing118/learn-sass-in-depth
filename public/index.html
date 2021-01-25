@@ -8,6 +8,8 @@
   <body>
     <header class="header">
       <h1>Learning SASS</h1>
+    </header>
+    <main class="main">
       <div class="boxes">
         <ul class="list">
           <li>
@@ -27,34 +29,59 @@
           </li>
         </ul>
       </div>
-    </header>
-    <main class="main">
+      <div class="boxes">
+        <pre class="code">
+          <span class="stx-keyword">let</span> <span class="stx-variable">username</span> = <span class="stx-string">"ရန်မိုးနိုင်";</span>
+          <span class="stx-keyword">let</span> <span class="stx-variable">password</span> = <span class="stx-string">"test11234"</span>;
+
+          <span class="stx-comment">// TODO: change crendentials to base64 encoding</span>
+          <span class="stx-keyword">let</span> <span class="stx-variable">base64Encoded</span> = Buffer.from(`${username}:${password}`).toString(<span class="stx-string">"base64"</span>);
+
+        </pre>
+      </div>
       <div class="boxes">
         <div class="box avatar">
           <img src="/assets/love.jpg" alt="My Love" />
-
           <h5 class="h5">Picture One</h5>
         </div>
 
         <div class="box avatar">
           <img src="/assets/love2.jpg" alt="My Love" />
-
           <h5 class="h5">Picture Two</h5>
         </div>
 
         <div class="box avatar">
-          <img src="/assets/love3.jpg" alt="My Love" />
+          <img src="/assets/love2.jpg" alt="My Love" />
+          <h5 class="h5">Picture Three</h5>
+        </div>
 
+        <div class="box avatar">
+          <img src="/assets/love.jpg" alt="My Love" />
+          <h5 class="h5">Picture One</h5>
+        </div>
+
+        <div class="box avatar">
+          <img src="/assets/love2.jpg" alt="My Love" />
+          <h5 class="h5">Picture Two</h5>
+        </div>
+
+        <div class="box avatar">
+          <img src="/assets/love2.jpg" alt="My Love" />
           <h5 class="h5">Picture Three</h5>
         </div>
       </div>
       <div class="boxes">
         <form class="form" action="index.html" method="post">
-          <h2 class="h5">Contact Info:</h2>
-          <input class="address" type="text" name="" value="" placeholder="Address" />
-          <input class="name" type="text" name="" value="" placeholder="Name" />
+          <h2 class="h5">ဆက်သွယ်ရန်:</h2>
+          <input class="address" type="text" name="" value="" placeholder="နာမည်" />
+          <input class="name" type="text" name="" value="" placeholder="လိပ်စာ" />
           <input class="zip" type="text" name="" value="" placeholder="Zip" />
         </form>
+      </div>
+      <div class="boxes">
+        <div class="buttons">
+          <button type="button" name="button" class="btn">Button</button>
+        </div>
       </div>
     </main>
   </body>

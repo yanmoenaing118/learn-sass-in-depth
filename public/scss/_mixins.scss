@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 @mixin createBox($size) {
   width: $size;
   height: auto;
@@ -85,12 +87,25 @@
   padding: $pad-v $pad-h;
   color: $color;
 }
-
 @mixin order($pad, $selectors...) {
   @for $i from 0 to length($selectors) {
     #{nth($selectors, $i + 1)} {
       margin-top: 1rem;
       padding: $pad;
+      font-size: 2rem;
     }
+  }
+}
+@mixin hightlight-syntax($args...) {
+  @each $name, $color in meta.keywords($args) {
+    pre span.stx-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+@mixin hover {
+  &:not([disable]):hover {
+    @content;
   }
 }
