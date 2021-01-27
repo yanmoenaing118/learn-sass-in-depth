@@ -103,9 +103,14 @@
     }
   }
 }
-
 @mixin hover {
   &:not([disable]):hover {
     @content;
   }
+}
+
+@mixin move($left-start, $left-stop) {
+  position: absolute;
+  left: $left-start;
+  transition: left ($left-stop - $left-start) * (1s / 50px);
 }
